@@ -10,10 +10,12 @@ Following document provide details for various types of storage available for AK
 2. Enable CSI driver for new or existing AKS cluster https://learn.microsoft.com/en-us/azure/aks/concepts-storage
 3. Create a persistent volume claim using built-in storage class.A persistent volume claim (PVC) uses the storage class object to dynamically provision an Azure Blob storage container.:-https://learn.microsoft.com/en-us/azure/aks/azure-csi-blob-storage-provision?tabs=mount-nfs%2Csecret#create-a-persistent-volume-claim-using-built-in-storage-class
 4. Use the persistent volume claim.:- https://learn.microsoft.com/en-us/azure/aks/azure-csi-blob-storage-provision?tabs=mount-nfs%2Csecret#use-the-persistent-volume-claim
-5. After the pod is in the running state, run the following command to create a new file called test.txt :- kubectl exec mypod -- touch /mnt/blob/test.txt
-6. Validate the disk is correctly mounted, run the following command, and verify you see the test.txt file in the output:- kubectl exec mypod -- ls /mnt/blob
-7. Validate on azure portal to check the blob created and file test.txt in the blob container.
-8. Upload a file on blob container through Portal.check again if you can see this uploaded file on Pod mounted volume :- kubectl exec mypod -- ls /mnt/blob
+5. After the pod is in the running state, run the following command to create a new file called test.txt :-
+   kubectl exec mypod -- touch /mnt/blob/test.txt
+6. Validate the disk is correctly mounted, run the following command, and verify you see the test.txt file in the output:-
+8. kubectl exec mypod -- ls /mnt/blob
+9. Validate on azure portal to check the blob created and file test.txt in the blob container.
+10. Upload a file on blob container through Portal.check again if you can see this uploaded file on Pod mounted volume :- kubectl exec mypod -- ls /mnt/blob
    
     
 
