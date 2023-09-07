@@ -13,9 +13,9 @@ Following document provide details for various types of storage available for AK
 5. After the pod is in the running state, run the following command to create a new file called test.txt :-
    kubectl exec mypod -- touch /mnt/blob/test.txt
 6. Validate the disk is correctly mounted, run the following command, and verify you see the test.txt file in the output:-
-8. kubectl exec mypod -- ls /mnt/blob
-9. Validate on azure portal to check the blob created and file test.txt in the blob container.
-10. Upload a file on blob container through Portal.check again if you can see this uploaded file on Pod mounted volume :- kubectl exec mypod -- ls /mnt/blob
+   kubectl exec mypod -- ls /mnt/blob
+7. Validate on azure portal to check the blob created and file test.txt in the blob container.
+8. Upload a file on blob container through Portal.check again if you can see this uploaded file on Pod mounted volume :- kubectl exec mypod -- ls /mnt/blob
    
     
 
